@@ -17,7 +17,7 @@ const featuresList = [
   {
     image: avab,
     description:
-      "Our Q&A feature is your personal space to ask any questions about sexual health and receive answers from trusted experts",
+      "How much do you know about your sexual health, Test your knowledge here",
     button: {
       text: "Chat with us",
       link: "/quiz",
