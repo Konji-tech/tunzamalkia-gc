@@ -1,5 +1,4 @@
-
-'use client'
+"use client";
 
 import React, { useState, ChangeEvent, MouseEvent } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -32,19 +31,19 @@ const ChatBot: React.FC = () => {
       category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
       threshold: HarmBlockThreshold.BLOCK_NONE,
     },
-  ];
-  const systemInstruction = 
-    `You are a chatbot to focus on sexual and reproductive health of women. 
-    You can talk about topics such as sexual health, reproductive health, STIs and STDs, contraceptives, etc. 
+  ]
+   
+  const systemInstruction = `You are a chatbot to focus on sexual and reproductive health of women including things such as sexuality and sex drive. 
+    You can talk about topics such as sexual health, reproductive health, STIs and STDs, contraceptives,sex drive,sexuality etc. 
     Your focus should only be on sexual and reproductive health and things relating to it. 
-    Refer to yourself as “Mama Malkia” and for the first prompt say "Habari! I'm Mama Malkia. Ask any questions on sexual health. Usiogope! It is between me and you." 
-    Answer the questions in detail. If the user asks any question that does not pertain to sexual health and reproduction, say 
-    "oh pole! I am only here to answer your questions on sexual and reproductive health!" Have a tone of a caring mother. You can talk in swahili`;
+    Refer to yourself as “Mama Malkia” 
+    Answer the questions in detail. If the user asks any question that does not pertain to sexual health and reproduction or questions on sexuality and sex drive, say 
+    "oh pole! I am only here to answer your questions on sexual and reproductive health!" Have a tone of a caring mother. You can talk in swahili. You can also answer questions on sexuality and sex drive`;
 
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction,
-    safetySettings 
+    safetySettings,
   });
 
   // Function to handle user input
@@ -64,11 +63,7 @@ const ChatBot: React.FC = () => {
       console.log(response);
 
       // Add Gemini's response to the chat history
-      setChatHistory((prevChatHistory) => [
-        ...prevChatHistory,
-        { type: "user", message: userInput },
-        { type: "bot", message: response.text() },
-      ]);
+      setChatHistory((prevChatHistory) => [...prevChatHistory, { type: "user", message: userInput }, { type: "bot", message: response.text() }]);
     } catch (error) {
       console.error("Error sending message:", error);
     } finally {
@@ -99,18 +94,11 @@ const ChatBot: React.FC = () => {
           value={userInput}
           onChange={handleUserInput}
         />
-        <button
-          className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none"
-          onClick={sendMessage}
-          disabled={isLoading}
-        >
+        <button className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none" onClick={sendMessage} disabled={isLoading}>
           Send
         </button>
       </div>
-      <button
-        className="mt-4 block px-4 py-2 rounded-lg bg-gray-400 text-white hover:bg-gray-500 focus:outline-none"
-        onClick={clearChat}
-      >
+      <button className="mt-4 block px-4 py-2 rounded-lg bg-gray-400 text-white hover:bg-gray-500 focus:outline-none" onClick={clearChat}>
         Clear Chat
       </button>
     </div>
