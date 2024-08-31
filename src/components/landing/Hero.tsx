@@ -8,8 +8,8 @@ export default function Hero() {
       <div className="flex-1 flex flex-col gap-8 justify-center items-center ">
         <h1 className="text-6xl font-bold text-center "> TunzaMalkia</h1>
         <p className="text-center text-md max-w-[60ch]">
-        At TunzaMalkia, our heartfelt mission is to create a warm and welcoming space where African women of all ages can feel supported and valued. We are dedicated to breaking down barriers and providing you with the gentle guidance and reliable information you need to make empowered decisions about your sexul or reproductive health. Whether you're seeking advice on contraception, or any information that relates to your sexual health, TunzaMalkia is here to walk alongside you every step of the way. 
-        We are committed to being your trusted companion in this journey, offering compassion, care, and comprehensive support tailored to your unique needs.
+        Welcome to our platform, a safe and empowering space for Kenyan women to access accurate, culturally sensitive information about their sexual and reproductive health. We are here to break the silence around topics that matter, from contraception to STIs, providing you with the knowledge and support to make informed decisions about your body. 
+        Explore our resources, engage with our community, and take charge of your sexual health with confidence, all in one place
         </p>
       </div>
 

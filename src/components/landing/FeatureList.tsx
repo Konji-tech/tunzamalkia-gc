@@ -7,9 +7,9 @@ const featuresList = [
   {
     image: chat,
     description:
-   "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice",
+   "Meet Mama Malkia, ask her any question you have about your sexual health and reproduction. No question is embarrassing. Usiogope!",
     button: {
-      text: "Chat with us",
+      text: "Chat with her",
       link: "/chatbot",
     },
   },
@@ -19,7 +19,7 @@ const featuresList = [
     description:
       "How much do you know about your sexual health, Test your knowledge here",
     button: {
-      text: "Chat with us",
+      text: "Test Yourself",
       link: "/quiz",
     },
   },
@@ -27,9 +27,9 @@ const featuresList = [
   {
     image: chat,
     description:
-      "Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.",
+      "Know more about contraception",
     button: {
-      text: "Chat with us",
+      text: "Resources",
       link: "/contraception",
     },
   },
@@ -38,7 +38,7 @@ const featuresList = [
 
 function FeatureList() {
   return (
-    <div className="my-4 gap-8-6 py-32 flex flex-wrap justify-center items-center">
+    <div className="my-4 gap-10 py-32 flex flex-wrap justify-center items-center ">
       {featuresList.map((feature) => (
         <div className="flex flex-col items-center gap-8 max-w-[400px]">
           <div className="bg-pink-900 rounded-full p-12  h-[240px] aspect-square flex items-center justify-center">
