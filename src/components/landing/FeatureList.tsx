@@ -10,7 +10,7 @@ const featuresList = [
    "",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/chatbot",
     },
   },
 
@@ -20,7 +20,7 @@ const featuresList = [
       "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice.",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/quiz",
     },
   },
 
@@ -30,7 +30,7 @@ const featuresList = [
       "Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/contraception",
     },
   },
 ];
