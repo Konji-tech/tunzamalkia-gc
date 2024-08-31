@@ -38,7 +38,7 @@ const featuresList = [
 
 function FeatureList() {
   return (
-    <div className="my-4 gap-8-6 py-32 flex flex-wrap justify-center items-center">
+    <div className="my-4 gap-8 py-32 flex flex-wrap justify-center items-center">
       {featuresList.map((feature) => (
         <div className="flex flex-col items-center gap-8 max-w-[400px]">
           <div className="bg-pink-900 rounded-full p-12  h-[240px] aspect-square flex items-center justify-center">
