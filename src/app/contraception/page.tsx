@@ -112,7 +112,8 @@ export default function Contraceptions() {
       <div className="flex flex-col px-16 py-16 bg-white text-center">
         <h2 className="text-4xl text-black font-bold">Welcome to Contraception education here at Malkia</h2>
         <p className="mt-4 text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum, nisl in lacinia egestas, sapien est tempus nisi, at efficitur mi lectus at dui.
+        Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.
+         Whether you're exploring birth control for the first time or looking to switch methods, our guide provides clear, compassionate, and culturally sensitive information tailored to your needs. 
         </p>
       </div>
       <div className="flex flex-col px-16 py-16 bg-white text-center">
