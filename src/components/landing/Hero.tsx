@@ -30,8 +30,3 @@ export default function Hero() {
   );
 }
 
-<<<<<<< HEAD
-=======
-export default Hero;
-
->>>>>>> c70bba3ba7792767a6d4773e1424982f5034f816
