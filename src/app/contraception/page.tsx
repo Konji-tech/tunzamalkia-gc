@@ -6,6 +6,9 @@ import avab from "@/../public/images/avab.svg";
 import Link from "next/link";
 import Testicle from "@/../public/images/Testicles.svg";
 import Redcross from "@/../public/images/RedCross.svg";
+import pills from "@/../public/images/pills.svg";
+import vaccine from "@/../public/images/vaccine.svg";
+import ovaries from "@/../public/images/Ovaries.svg";
 
 interface CampProps {
   title: string;
@@ -13,7 +16,7 @@ interface CampProps {
 const contraceptionList = [
   {
     title: "IUD",
-    image: chat,
+    image: ovaries,
     button: {
       text: "Chat with us",
       link: "/iud",
@@ -29,7 +32,7 @@ const contraceptionList = [
   },
   {
     title: "Injection",
-    image: chat,
+    image: vaccine,
     button: {
       text: "Chat with us",
       link: "/injection",
@@ -37,7 +40,7 @@ const contraceptionList = [
   },
   {
     title: "Pill",
-    image: chat,
+    image: pills,
     button: {
       text: "Chat with us",
       link: "/pill",
