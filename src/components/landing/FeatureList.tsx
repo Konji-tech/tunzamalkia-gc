@@ -7,7 +7,7 @@ const featuresList = [
   {
     image: chat,
     description:
-   "",
+   "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice",
     button: {
       text: "Chat with us",
       link: "/chatbot",
@@ -17,7 +17,7 @@ const featuresList = [
   {
     image: avab,
     description:
-      "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice.",
+      "Our Q&A feature is your personal space to ask any questions about sexual health and receive answers from trusted experts",
     button: {
       text: "Chat with us",
       link: "/quiz",
