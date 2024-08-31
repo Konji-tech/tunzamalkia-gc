@@ -70,6 +70,7 @@ function ContraceptionsList() {
               src={feature.image}
               alt="image"
               className="object-cover"
+
             />
           </div>
 
@@ -96,10 +97,10 @@ const Option = ({ title }: CampProps) => {
   );
 };
 
-function Contraceptions() {
+export default function Contraceptions() {
   return (
     <div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between px-10 py-5 bg-gradient-to-r from-purple-300 to-pink-400 gap-16 lg:gap-32">
+      <div className="flex flex-col-reverse lg:flex-row justify-between px-10 py-5  gap-16 lg:gap-32">
         <div className="flex-1 flex flex-col gap-8 justify-center items-center">
           <h1 className="text-6xl font-bold text-center lg:text-left">Contraceptions</h1>
         </div>
@@ -126,4 +127,4 @@ function Contraceptions() {
   );
 }
 
-export default Contraceptions;
+

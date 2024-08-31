@@ -35,6 +35,7 @@ const featuresList = [
   },
 ];
 
+
 function FeatureList() {
   return (
     <div className="my-4 gap-8-6 py-32 flex flex-wrap justify-center items-center">
