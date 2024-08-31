@@ -11,7 +11,7 @@ type Message = {
   message: string;
 };
 
-const ChatBot: React.FC = () => {
+export default function Chatbot() {
   const [userInput, setUserInput] = useState<string>("");
   const [chatHistory, setChatHistory] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -31,8 +31,9 @@ const ChatBot: React.FC = () => {
       category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
       threshold: HarmBlockThreshold.BLOCK_NONE,
     },
-  ]
-   
+  ];
+
+  //Fine tuning
   const systemInstruction = `You are a chatbot to focus on sexual and reproductive health of women including things such as sexuality and sex drive. 
     You can talk about topics such as sexual health, reproductive health, STIs and STDs, contraceptives,sex drive,sexuality etc. 
     Your focus should only be on sexual and reproductive health and things relating to it. 
@@ -78,7 +79,7 @@ const ChatBot: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+<div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-4">Mama Malkia</h1>
 
       <div className="chat-container rounded-lg shadow-md p-4 text-wrap">
@@ -103,6 +104,4 @@ const ChatBot: React.FC = () => {
       </button>
     </div>
   );
-};
-
-export default ChatBot;
+}

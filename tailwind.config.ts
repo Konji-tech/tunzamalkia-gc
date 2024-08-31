@@ -18,59 +18,31 @@ const config = {
       },
     },
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
+      
+      
+     
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        fadein: 'fade-in 1s ease-in-out 0.25s 1',
+        fadeout: 'fade-out 1s ease-out 0.25s 1',
+        fadeindown: 'fade-in-down 1s ease-in 0.25s 1',
+        fadeintopleft: 'fade-in-top-left 1s ease-out 0.25s 1',
+        fadeintopright: 'fade-in-top-right 1s ease-out 0.25s 1',
+        fadeinbottomleft: 'fade-in-bottom-left 1s ease-out 0.25s 1',
+        fadeinbottomright: 'fade-in-bottom-right 1s ease-out 0.25s 1',
+        fadeinleft: 'fade-in-left 1s ease-in-out 0.25s 1',
+        fadeinbouncedown: 'fade-in-bouncedown 1s ease-in-out 0.25s 1',
+        fadeinbounceup: 'fade-in-bounceup 1s ease-in-out 0.25s 1',
+        fadeinbounceright: 'fade-in-bounce-right 1s ease-in-out 0.25s 1',
+        fadeinbounceleft: 'fade-in-bounce-left 1s ease-in-out 0.25s 1',
+        fadeinright: 'fade-in-right 1s ease-in-out 0.25s 1',
+        fadeinup: 'fade-in-up 1s ease-in-out 0.25s 1',
+        fadeoutdown: 'fade-out-down 1s ease-in-out 0.25s 1',
+        fadeouttopleft: 'fade-out-top-left 1s ease-in-out 0.25s 1',
+        fadeouttopright: 'fade-out-top-right 1s ease-in-out 0.25s 1',
+        fadeoutleft: 'fade-out-left 1s ease-in-out 0.25s 1',
+        fadeoutright: 'fade-out-right 1s ease-in-out 0.25s 1',
+        fadeoutup: 'fade-out-up 1s ease-in-out 0.25s 1',
+        
       },
     },
   },

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import friends from "@/../public/images/friends.svg";
 
-function Hero() {
+export default function Hero() {
   return (
-    <div className="flex px-16 py-32 bg-white lg:flex-row flex-col-reverse gap-32  lg:gap-16">
+    <div className="flex px-16 py-32 bg-white lg:flex-row flex-col-reverse gap-32  lg:gap-16 animate-fade-left">
       {/* hero text */}
-      <div className="flex-1 flex flex-col gap-8 justify-center items-center">
+      <div className="flex-1 flex flex-col gap-8 justify-center items-center ">
         <h1 className="text-6xl font-bold text-center "> TunzaMalkia</h1>
         <p className="text-center text-md max-w-[60ch]">
           Loreum ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -23,11 +23,10 @@ function Hero() {
         <Image
           src={friends}
           alt="women playing"
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full "
         />
       </div>
     </div>
   );
 }
 
-export default Hero;
