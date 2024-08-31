@@ -13,29 +13,21 @@ const contraceptionList = [
     image: chat,
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/iud",
     },
   },
   {
     image: chat,
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/condom",
     },
   },
   {
     image: chat,
     button: {
       text: "Chat with us",
-      link: "",
-    },
-  },
-
-  {
-    image: chat,
-    button: {
-      text: "Chat with us",
-      link: "",
+      link: "/injection",
     },
   },
 
@@ -43,7 +35,15 @@ const contraceptionList = [
     image: chat,
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/pill",
+    },
+  },
+
+  {
+    image: chat,
+    button: {
+      text: "Chat with us",
+      link: "/vasectomy",
     },
   },
 
@@ -51,7 +51,7 @@ const contraceptionList = [
     image: chat,
     button:{
       text:"Chat with Us",
-      link:"",
+      link:"/implant",
     }
   }
 ];

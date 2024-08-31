@@ -7,30 +7,30 @@ const featuresList = [
   {
     image: chat,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga vitae eos, eius magni aspernatur consequatur minus, id distinctio deleniti tenetur odit rerum ullam ipsam quos commodi ut vel alias in.",
+   "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/chatbot",
     },
   },
 
   {
     image: avab,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga vitae eos, eius magni aspernatur consequatur minus, id distinctio deleniti tenetur odit rerum ullam ipsam quos commodi ut vel alias in.",
+      "How much do you know about your sexual health, Test your knowledge here",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/quiz",
     },
   },
 
   {
     image: chat,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga vitae eos, eius magni aspernatur consequatur minus, id distinctio deleniti tenetur odit rerum ullam ipsam quos commodi ut vel alias in.",
+      "Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.",
     button: {
       text: "Chat with us",
-      link: "",
+      link: "/contraception",
     },
   },
 ];
