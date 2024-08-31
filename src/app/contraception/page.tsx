@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import ccs from '@/../public/images/ccs.png';
+import ccs from '@/../public/images/Ovaries.svg';
 import chat from "@/../public/images/chat.svg";
 import avab from "@/../public/images/avab.svg";
 import Link from "next/link";
+import Testicle from "@/../public/images/Testicles.svg";
+import Redcross from "@/../public/images/RedCross.svg";
 
 interface CampProps {
   title: string;
@@ -19,10 +21,10 @@ const contraceptionList = [
   },
   {
     title: "Condom",
-    image: chat,
+    image: Testicle,
     button: {
       text: "Chat with us",
-      link: "/condom",
+      link: "/contraception/condom",
     },
   },
   {
@@ -43,7 +45,7 @@ const contraceptionList = [
   },
   {
     title: "Vasectomy",
-    image: chat,
+    image: Testicle,
     button: {
       text: "Chat with us",
       link: "/vasectomy",
@@ -51,7 +53,7 @@ const contraceptionList = [
   },
   {
     title: "Implant",
-    image: chat,
+    image: Redcross,
     button: {
       text: "Chat with Us",
       link: "/implant",
@@ -104,7 +106,7 @@ export default function Contraceptions() {
           <Image
             src={ccs}
             alt="contraception"
-            className="object-cover h-[300px] w-[300px] lg:h-[400px] lg:w-[400px]"
+            className="object-cover "
           />
         </div>
       </div>
