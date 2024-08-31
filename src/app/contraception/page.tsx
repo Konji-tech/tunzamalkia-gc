@@ -10,6 +10,7 @@ interface CampProps {
 }
 const contraceptionList = [
   {
+    title: "IUD",
     image: chat,
     button: {
       text: "Chat with us",
@@ -17,6 +18,7 @@ const contraceptionList = [
     },
   },
   {
+    title: "Condom",
     image: chat,
     button: {
       text: "Chat with us",
@@ -24,37 +26,39 @@ const contraceptionList = [
     },
   },
   {
+    title: "Injection",
     image: chat,
     button: {
       text: "Chat with us",
       link: "/injection",
     },
   },
-
   {
+    title: "Pill",
     image: chat,
     button: {
       text: "Chat with us",
       link: "/pill",
     },
   },
-
   {
+    title: "Vasectomy",
     image: chat,
     button: {
       text: "Chat with us",
       link: "/vasectomy",
     },
   },
-
   {
+    title: "Implant",
     image: chat,
-    button:{
-      text:"Chat with Us",
-      link:"/implant",
-    }
-  }
+    button: {
+      text: "Chat with Us",
+      link: "/implant",
+    },
+  },
 ];
+
 
 function ContraceptionsList() {
   return (
@@ -62,15 +66,17 @@ function ContraceptionsList() {
       {contraceptionList.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-white rounded-3xl shadow-lg p-6"
+          className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-white rounded-3xl shadow-lg p-6 transition duration-1000 hover:scale-125"
         >
+          {/* Title */}
+          <h3 className="text-xl font-semibold">{feature.title}</h3>
+
           {/* Image */}
-          <div className="rounded-3xl w-full aspect-square flex items-center justify-center">
+          <div className="rounded-3xl w-full aspect-square flex items-center justify-center ">
             <Image
               src={feature.image}
-              alt="image"
+              alt={feature.title} // Use title for alt text
               className="object-cover"
-
             />
           </div>
 
@@ -86,16 +92,6 @@ function ContraceptionsList() {
   );
 }
 
-
-const Option = ({ title }: CampProps) => {
-  return (
-    <div className={`flex-none h-[500px] w-[400px] bg-cover bg-center rounded-full shadow-lg p-10 relative`}>
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-4 py-2 rounded-full text-center">
-        <h2 className="text-white text-lg font-bold">{title}</h2>
-      </div>
-    </div>
-  );
-};
 
 export default function Contraceptions() {
   return (
@@ -116,11 +112,12 @@ export default function Contraceptions() {
       <div className="flex flex-col px-16 py-16 bg-white text-center">
         <h2 className="text-4xl text-black font-bold">Welcome to Contraception education here at Malkia</h2>
         <p className="mt-4 text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum, nisl in lacinia egestas, sapien est tempus nisi, at efficitur mi lectus at dui.
+        Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.
+         Whether you're exploring birth control for the first time or looking to switch methods, our guide provides clear, compassionate, and culturally sensitive information tailored to your needs. 
         </p>
       </div>
       <div className="flex flex-col px-16 py-16 bg-white text-center">
-        <h1 className="text-4xl text-black font-bold ">Services Offered</h1>
+        <h1 className="text-4xl text-black font-bold ">Resources</h1>
       </div>
       <ContraceptionsList />
     </div>

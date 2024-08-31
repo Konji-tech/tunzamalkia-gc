@@ -7,55 +7,54 @@ const featuresList = [
   {
     image: chat,
     description:
-   "Meet our Mama Malkia, your 24/7 chatbot companion for quick and caring sexual health advice",
+      "Meet Mama Malkia, ask her any question you have about your sexual health and reproduction. No question is embarrassing. Usiogope!",
     button: {
-      text: "Chat with us",
+      text: "Chat with her",
       link: "/chatbot",
     },
   },
-
   {
     image: avab,
     description:
-      "How much do you know about your sexual health, Test your knowledge here",
+      "How much do you know about your sexual health? Test your knowledge here.",
     button: {
-      text: "Chat with us",
+      text: "Test Yourself",
       link: "/quiz",
     },
   },
-
   {
     image: chat,
-    description:
-      "Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.",
+    description: "Know more about contraception.",
     button: {
-      text: "Chat with us",
+      text: "Resources",
       link: "/contraception",
     },
   },
 ];
 
-
 function FeatureList() {
   return (
     <div className="my-4 gap-8 py-32 flex flex-wrap justify-center items-center">
-      {featuresList.map((feature) => (
-        <div className="flex flex-col items-center gap-8 max-w-[400px]">
-          <div className="bg-pink-900 rounded-full p-12  h-[240px] aspect-square flex items-center justify-center">
+      {featuresList.map((feature, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center gap-4 max-w-[400px] w-full"
+        >
+          <div className="bg-pink-900 rounded-lg p-8 w-full h-[300px] flex items-center justify-center mb-[5%]">
             <Image
               src={feature.image}
-              alt="chatting"
+              alt="feature image"
               className="object-cover"
             />
           </div>
-          <h3 className="text-center text-wrap font-bold">
-            {feature.description}
-          </h3>
-          <Link href={feature.button.link}>
-            <button className=" text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
-              {feature.button.text}
-            </button>
-          </Link>
+          <h3 className="text-center font-bold w-full px-4">{feature.description}</h3> {/* Added padding for better alignment */}
+          <div className="w-full flex justify-center mt-4"> {/* Reduced margin for better spacing */}
+            <Link href={feature.button.link}>
+              <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                {feature.button.text}
+              </button>
+            </Link>
+          </div>
         </div>
       ))}
     </div>
