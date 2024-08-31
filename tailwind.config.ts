@@ -18,36 +18,33 @@ const config = {
       },
     },
     extend: {
-      
-      
-     
       animation: {
-        fadein: 'fade-in 1s ease-in-out 0.25s 1',
-        fadeout: 'fade-out 1s ease-out 0.25s 1',
-        fadeindown: 'fade-in-down 1s ease-in 0.25s 1',
-        fadeintopleft: 'fade-in-top-left 1s ease-out 0.25s 1',
-        fadeintopright: 'fade-in-top-right 1s ease-out 0.25s 1',
-        fadeinbottomleft: 'fade-in-bottom-left 1s ease-out 0.25s 1',
-        fadeinbottomright: 'fade-in-bottom-right 1s ease-out 0.25s 1',
-        fadeinleft: 'fade-in-left 1s ease-in-out 0.25s 1',
-        fadeinbouncedown: 'fade-in-bouncedown 1s ease-in-out 0.25s 1',
-        fadeinbounceup: 'fade-in-bounceup 1s ease-in-out 0.25s 1',
-        fadeinbounceright: 'fade-in-bounce-right 1s ease-in-out 0.25s 1',
-        fadeinbounceleft: 'fade-in-bounce-left 1s ease-in-out 0.25s 1',
-        fadeinright: 'fade-in-right 1s ease-in-out 0.25s 1',
-        fadeinup: 'fade-in-up 1s ease-in-out 0.25s 1',
-        fadeoutdown: 'fade-out-down 1s ease-in-out 0.25s 1',
-        fadeouttopleft: 'fade-out-top-left 1s ease-in-out 0.25s 1',
-        fadeouttopright: 'fade-out-top-right 1s ease-in-out 0.25s 1',
-        fadeoutleft: 'fade-out-left 1s ease-in-out 0.25s 1',
-        fadeoutright: 'fade-out-right 1s ease-in-out 0.25s 1',
-        fadeoutup: 'fade-out-up 1s ease-in-out 0.25s 1',
-        
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        "fade-in-left": {
+                    "0%": {
+                        opacity: "0",
+                        transform: "translate3d(-100%, 0, 0)",
+                    },
+                    "100%": {
+                        opacity: "1",
+                        transform: "translate3d(0, 0, 0)",
+                    },
+                },
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 } satisfies Config;
 
 export default config;
-

@@ -5,6 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import ChatHistory from "./components/chatHistory";
 import Loading from "./components/loading";
 import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
+import Image from "next/image";
 
 type Message = {
   type: "user" | "bot";
@@ -96,7 +97,7 @@ export default function Chatbot() {
           onChange={handleUserInput}
         />
         <button className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none" onClick={sendMessage} disabled={isLoading}>
-          Send
+        Send
         </button>
       </div>
       <button className="mt-4 block px-4 py-2 rounded-lg bg-gray-400 text-white hover:bg-gray-500 focus:outline-none" onClick={clearChat}>
