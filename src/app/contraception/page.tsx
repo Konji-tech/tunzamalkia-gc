@@ -17,7 +17,7 @@ const contraceptionList = [
     },
   },
   {
-    image: avab,
+    image: chat,
     button: {
       text: "Chat with us",
       link: "",
@@ -46,18 +46,24 @@ const contraceptionList = [
       link: "",
     },
   },
+
+  {
+    image: chat,
+    button:{
+      text:"Chat with Us",
+      link:"",
+    }
+  }
 ];
 
 function ContraceptionsList() {
   return (
     <div className="py-5 bg-white grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
       {contraceptionList.map((feature, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-white rounded-3xl shadow-lg p-6"
         >
-        
-          
           {/* Image */}
           <div className="rounded-3xl w-full aspect-square flex items-center justify-center">
             <Image
