@@ -38,7 +38,6 @@ function FeatureList() {
     <div>
       {/* Divider between sections */}
       <div className="w-full h-8  bg-gradient-to-r from-indigo-600  to-fuchsia-400">
-        
       </div>
 
       {/* Feature List Section */}
