@@ -21,6 +21,11 @@ const config = {
       animation: {
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
+        fadeInRight: 'fadeInRight 1s ease-in-out',
+      },
+      fontFamily: {
+        libre: ['Libre Baskerville', 'serif'], 
+        poppins: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         marquee: {
@@ -31,16 +36,12 @@ const config = {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
-        "fade-in-left": {
-                    "0%": {
-                        opacity: "0",
-                        transform: "translate3d(-100%, 0, 0)",
-                    },
-                    "100%": {
-                        opacity: "1",
-                        transform: "translate3d(0, 0, 0)",
-                    },
-                },
+        fadeInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        
+        
       },
     },
   },
