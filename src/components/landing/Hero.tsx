@@ -1,3 +1,6 @@
+
+
+
 import Image from "next/image";
 import friends from "@/../public/images/friends.svg";
 
