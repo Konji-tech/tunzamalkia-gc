@@ -3,5 +3,5 @@ export const mainRoutes = [
   { name: "Mama Malkia", href: "/chatbot" },
   { name: "Q&A", href: "/quiz" },
   { name: "Resources", href: "/contraception" },
-  { name: "Stories", href: "/" },
+  { name: "Stories", href: "/stories" },
 ];
