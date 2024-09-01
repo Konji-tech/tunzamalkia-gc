@@ -22,7 +22,7 @@ export default function Navbar({ className }: { className: string }) {
             <li key={route.name}>
               <a
                 href={route.href}
-                className="text-black hover:text-fuchsia-400 transition-colors dark:text-gray-300 dark:hover:text-white"
+                className="text-black hover:text-white transition-colors font-poppins"
               >
                 {route.name}
               </a>

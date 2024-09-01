@@ -101,7 +101,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-600  to-fuchsia-400"> {/* Gradient background */}
+    <div className="flex justify-center items-center min-h-screen "> 
       <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6"> {/* Expanded width */}
         <h1 className="text-3xl font-bold text-center mb-6">Mama Malkia</h1>
         <h2 className="font-bold text-center mb-6">Ask any Question on sexual and reproductive health! Usiogope!</h2>
