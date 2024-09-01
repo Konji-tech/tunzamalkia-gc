@@ -18,15 +18,15 @@ const contraceptionList = [
     title: "IUD",
     image: ovaries,
     button: {
-      text: "Chat with us",
-      link: "/iud",
+      text: "Know More",
+      link: "/contraception/iud",
     },
   },
   {
     title: "Condom",
     image: Testicle,
     button: {
-      text: "Chat with us",
+      text: "Know More",
       link: "/contraception/condom",
     },
   },
@@ -34,7 +34,7 @@ const contraceptionList = [
     title: "Injection",
     image: vaccine,
     button: {
-      text: "Chat with us",
+      text: "Know More",
       link: "/injection",
     },
   },
@@ -42,7 +42,7 @@ const contraceptionList = [
     title: "Pill",
     image: pills,
     button: {
-      text: "Chat with us",
+      text: "Know More",
       link: "/pill",
     },
   },
@@ -50,7 +50,7 @@ const contraceptionList = [
     title: "Vasectomy",
     image: Testicle,
     button: {
-      text: "Chat with us",
+      text: "Know More",
       link: "/vasectomy",
     },
   },
@@ -58,7 +58,7 @@ const contraceptionList = [
     title: "Implant",
     image: Redcross,
     button: {
-      text: "Chat with Us",
+      text: "Know More",
       link: "/implant",
     },
   },
@@ -67,7 +67,7 @@ const contraceptionList = [
 
 function ContraceptionsList() {
   return (
-    <div className="py-5 bg-white grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+    <div className="py-5 bg-white grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center font-poppins">
       {contraceptionList.map((feature, index) => (
         <div
           key={index}
@@ -115,11 +115,8 @@ export default function Contraceptions() {
       </div>
 
       <div className="flex flex-col px-16 py-16 bg-white text-center">
-        <h2 className="text-4xl text-black font-bold">Welcome to Contraception education here at Malkia</h2>
-        <p className="mt-4 text-lg">
-        Navigate your contraceptive options with confidence using our comprehensive Contraception Guide.
-         Whether you're exploring birth control for the first time or looking to switch methods, our guide provides clear, compassionate, and culturally sensitive information tailored to your needs. 
-        </p>
+        <h2 className="text-4xl text-black font-bold">Welcome to Contraception Education </h2>
+        
       </div>
       <div className="flex flex-col px-16 py-16 bg-white text-center">
         <h1 className="text-4xl text-black font-bold ">Resources</h1>

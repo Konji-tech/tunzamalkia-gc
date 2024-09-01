@@ -6,7 +6,7 @@ import friends from "@/../public/images/friends.svg";
 
 export default function Hero() {
   return (
-    <div className="flex px-16 py-32 bg-white lg:flex-row flex-col-reverse gap-32  lg:gap-16 animate-fadeInRight">
+    <div className="flex px-16 py-32 bg-white lg:flex-row flex-col-reverse gap-32  lg:gap-16 animate-fadeInRight font-poppins font-bold text-lg">
       {/* hero text */}
       <div className="flex-1 flex flex-col gap-8 justify-center items-center ">
         <h1 className="text-6xl font-bold text-center font-poppins animate-bounce"> TunzaMalkia</h1>

@@ -104,6 +104,7 @@ export default function Chatbot() {
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-600  to-fuchsia-400"> {/* Gradient background */}
       <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6"> {/* Expanded width */}
         <h1 className="text-3xl font-bold text-center mb-6">Mama Malkia</h1>
+        <h2 className="font-bold text-center mb-6">Ask any Question on sexual and reproductive health! Usiogope!</h2>
 
         <div className="chat-container overflow-y-auto h-96 mb-4 p-4 bg-gray-50 rounded-lg shadow-inner">
           <ChatHistory chatHistory={chatHistory} />
@@ -113,13 +114,13 @@ export default function Chatbot() {
         <div className="flex mt-4">
           <input
             type="text"
-            className="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-grow px-4 py-2 rounded-lg border border-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Type your message..."
             value={userInput}
             onChange={handleUserInput}
           />
           <button
-            className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none"
+            className="px-4 py-2 ml-2 rounded-lg bg-gradient-to-r from-indigo-600  to-fuchsia-400 text-white hover:bg-blue-600 focus:outline-none"
             onClick={sendMessage}
             disabled={isLoading}
           >
