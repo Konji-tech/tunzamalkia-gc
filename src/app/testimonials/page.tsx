@@ -1,33 +1,34 @@
 import Image from "next/image";
-import chat from "@/../public/images/stories.svg";
+import chat from "@/../public/images/Bonding.svg";
 import questions from "@/../public/images/questions.svg";
 import Link from "next/link";
 import mainlanding from "@/../public/images/mainlanding.png";
+import ccs from "@/../public/images/age.svg";
 
 const featuresList = [
   {
     image: chat,
     description:
-      "Meet Mama Malkia, ask her any question you have about your sexual health and reproduction. No question is embarrassing. Usiogope!",
+      "Find My Voice",
     button: {
-      text: "Chat with her",
+      text: "Read More",
       link: "/testimonials/story1",
     },
   },
   {
-    image: questions,
+    image: ccs,
     description:
-      "How much do you know about your sexual health? Test your knowledge here.",
+      "Coming of age.",
     button: {
-      text: "Test Yourself",
+      text: "Read More",
       link: "/testimonials/story2",
     },
   },
   {
     image: mainlanding,
-    description: "Know more about contraception.",
+    description: "My Community",
     button: {
-      text: "Resources",
+      text: "Read More",
       link: "/testimonials/story3",
     },
   },
@@ -38,6 +39,7 @@ export default function FeatureList() {
     <div>
       {/* Stories Heading */}
       <h1 className="text-3xl font-bold text-center my-8">Stories</h1>
+      <h2 className="text-2xl font-bold text-center my-10">Anonymous stories of Kenyan women</h2>
 
       {/* Divider between sections */}
       <div className="w-full h-8 bg-gradient-to-r from-indigo-600 to-fuchsia-400"></div>
