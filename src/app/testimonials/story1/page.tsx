@@ -1,4 +1,8 @@
+
+'use client'
+
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 const Story1 = () => {
   const [testimonials, setTestimonials] = useState<string[]>([]);
