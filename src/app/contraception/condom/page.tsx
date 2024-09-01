@@ -13,7 +13,7 @@ export default function CondomPage() {
           <h1 className="text-6xl font-bold text-center "> Male Condoms</h1>
         </div>
         {/* hero image */}
-        <div className="flex justify-center px-16">
+        <div className="flex justify-center px-1">
           <Image src={Testicles} alt="Animated Testicles" className=" w-60" />
         </div>
       </div>

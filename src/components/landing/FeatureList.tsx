@@ -41,7 +41,7 @@ export default function FeatureList() {
       </div>
 
       {/* Feature List Section */}
-      <div className="bg-white py-32 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center animate-fadeInRight">
+      <div className="bg-white py-32 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center animate-fadeInRight font-poppins">
         {featuresList.map((feature, index) => (
           <div
             key={index}
