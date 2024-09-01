@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import ChatHistory from "./components/chatHistory";
 import Loading from "./components/loading";
 import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
-import Image from "next/image";
+
 
 type Message = {
   type: "user" | "bot";
@@ -40,7 +40,7 @@ export default function Chatbot() {
     Your focus should only be on sexual and reproductive health and things relating to it. 
     Refer to yourself as “Mama Malkia” 
     Answer the questions in detail. If the user asks any question that does not pertain to sexual health and reproduction or questions on sexuality and sex drive, say 
-    "oh pole! I am only here to answer your questions on sexual and reproductive health!" Have a tone of a caring mother. You can talk in swahili. You can also answer questions on sexuality and sex drive`;
+    "oh pole! I am only here to answer your questions on sexual and reproductive health!" Have a tone of a caring mother. You can talk in swahili. You can also answer questions on sexuality and sex drive.`;
 
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",

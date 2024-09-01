@@ -33,7 +33,7 @@ const featuresList = [
   },
 ];
 
-function FeatureList() {
+export default function FeatureList() {
   return (
     <div>
       {/* Divider between sections */}
@@ -41,7 +41,7 @@ function FeatureList() {
       </div>
 
       {/* Feature List Section */}
-      <div className="bg-white py-32 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      <div className="bg-white py-32 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center animate-fadeInRight">
         {featuresList.map((feature, index) => (
           <div
             key={index}
@@ -71,4 +71,4 @@ function FeatureList() {
   );
 }
 
-export default FeatureList;
+
