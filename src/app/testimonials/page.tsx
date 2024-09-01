@@ -39,6 +39,7 @@ export default function FeatureList() {
     <div>
       {/* Stories Heading */}
       <h1 className="text-3xl font-bold text-center my-8">Stories</h1>
+      <h2 className="text-2xl font-bold text-center my-10">Anonymous stories of Kenyan women</h2>
 
       {/* Divider between sections */}
       <div className="w-full h-8 bg-gradient-to-r from-indigo-600 to-fuchsia-400"></div>

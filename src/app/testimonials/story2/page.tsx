@@ -3,7 +3,7 @@ import Link from "next/link";
 const Page2 = () => {
   return (
     <div className="p-8 bg-white w-screen h-screen">
-      <h1 className="text-3xl font-bold mb-4 text-center">Finding My Voice</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Coming Of Age</h1>
       <div className="font-poppins p-16 text-justify">
         <p>
           I was 22 when I first realized how little I knew about my own body. Growing up, conversations about sex were shrouded in shame and secrecy. In my
