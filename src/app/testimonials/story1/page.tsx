@@ -1,21 +1,53 @@
-import Link from "next/link";
+import { useState, useEffect } from "react";
 
-const Page1 = () => {
+const Story1 = () => {
+  const [testimonials, setTestimonials] = useState<string[]>([]);
+  const [newTestimonial, setNewTestimonial] = useState("");
+
+  useEffect(() => {
+    // Load testimonials from local storage
+    const storedTestimonials = localStorage.getItem("story1Testimonials");
+    if (storedTestimonials) {
+      setTestimonials(JSON.parse(storedTestimonials));
+    }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const updatedTestimonials = [...testimonials, newTestimonial];
+    setTestimonials(updatedTestimonials);
+    localStorage.setItem("story1Testimonials", JSON.stringify(updatedTestimonials));
+    setNewTestimonial(""); // Clear the input field
+  };
+
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Testimonial: Experience with Implants</h1>
-      <p className="mb-4">"I had the implant for three years, and it changed my life. I no longer had to worry about taking a pill every day. My periods were lighter, and I felt free!" - Aisha</p>
-      <p className="mb-4">"At first, I was hesitant, but the convenience and effectiveness of the implant have been incredible. I would recommend it to anyone looking for a reliable contraceptive method." - Fatima</p>
-      
-      <h2 className="text-2xl font-bold mt-6">Share Your Experience</h2>
-      <p className="mb-4">We would love to hear your story! Please share your experience under an alias.</p>
-      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfIflscaYftjiCQ3c0bxSlmB-uWofJTojyEBk0ML-OdaEQbTQ/viewform">
-        <button className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5">
-          Share Your Testimonial
-        </button>
-      </Link>
+      <h1 className="text-2xl font-bold mb-4">Testimonials</h1>
+      <div className="mb-6">
+        {testimonials.length === 0 ? (
+          <p>No testimonials yet. Be the first to share your story!</p>
+        ) : (
+          testimonials.map((testimonial, index) => (
+            <div key={index} className="border p-4 mb-4 rounded-lg shadow-md">
+              <p>{testimonial}</p>
+            </div>
+          ))
+        )}
+      </div>
+      <h2 className="text-xl font-semibold mb-2">Share Your Story</h2>
+      <form onSubmit={handleSubmit}>
+        <textarea
+          value={newTestimonial}
+          onChange={(e) => setNewTestimonial(e.target.value)}
+          rows={4}
+          placeholder="Share your story..."
+          className="w-full border p-2 rounded-lg mb-4"
+          required
+        ></textarea>
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-lg">Submit</button>
+      </form>
     </div>
   );
 };
 
-export default Page1;
+export default Story1;
