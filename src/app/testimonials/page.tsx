@@ -1,3 +1,6 @@
+'use client'
+
+
 import Image from "next/image";
 import chat from "@/../public/images/Bonding.svg";
 import questions from "@/../public/images/questions.svg";
