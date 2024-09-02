@@ -71,7 +71,7 @@ function ContraceptionsList() {
       {contraceptionList.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-white rounded-3xl shadow-lg p-6 transition duration-1000 hover:scale-125"
+          className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-[#f8d7da] rounded-3xl shadow-2xl p-6 transition duration-1000 hover:scale-125"
         >
           {/* Title */}
           <h3 className="text-xl font-semibold">{feature.title}</h3>
@@ -80,7 +80,7 @@ function ContraceptionsList() {
           <div className="rounded-3xl w-full aspect-square flex items-center justify-center ">
             <Image
               src={feature.image}
-              alt={feature.title} // Use title for alt text
+              alt={feature.title} 
               className="object-cover"
             />
           </div>
@@ -114,7 +114,7 @@ export default function Contraceptions() {
         </div>
       </div>
 
-      <div className="flex flex-col px-16 py-16 bg-white text-center">
+      <div className="flex flex-col px-16 py-16 bg-purple-300  text-center rounded-md  ">
         <h2 className="text-4xl text-black font-bold">Welcome to Contraception Education </h2>
         
       </div>
