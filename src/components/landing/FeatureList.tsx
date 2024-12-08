@@ -1,34 +1,34 @@
 import React from 'react';
 import Image from "next/image";
-import chat from "@/../public/images/img4.png";
-import community from "@/../public/images/img3.png";
+import chat from "@/../public/images/chat.svg";
+import questions from "@/../public/images/questions.svg";
 import Link from "next/link";
-import visual from "@/../public/images/img2.png";
+import mainlanding from "@/../public/images/mainlanding.png";
 
 // Features List Data
 const featuresList = [
   {
     image: chat,
-    description: "Meet Uliza, ask her any question you have about PCOS. No question is embarrassing. Ask Away!",
+    description: "Meet Mama Malkia, ask her any question you have about your sexual health and reproduction. No question is embarrassing. Usiogope!",
     button: {
       text: "Chat with her",
       link: "/chatbot",
     },
   },
   {
-    image: community,
-    description: "Mjali Community. A space to share and engage with other women's PCOS journey anonymously",
+    image: questions,
+    description: "How much do you know about your sexual health? Test your knowledge here.",
     button: {
       text: "Test Yourself",
       link: "/quiz",
     },
   },
   {
-    image: visual,
-    description: "Take Control of your Health with Jiangalie! A real-time facial scan that provides personalized PCOS insights",
+    image: mainlanding,
+    description: "Know more about contraception.",
     button: {
       text: "Resources",
-      link: "/visual",
+      link: "/contraception",
     },
   },
 ];
@@ -38,20 +38,7 @@ const FeatureList = () => {
   return (
     <div>
       {/* Divider between sections */}
-      <div className="w-full bg-gradient-to-r from-pink-300  to-fuchsia-400 py-2">
-  <div className="flex justify-between items-center max-w-6xl mx-auto text-black font-bold tracking-widest">
-    <span>FAHARI YA JAMII</span>
-    <span>•</span>
-    <span>FAHARI YA JAMII</span>
-    <span>•</span>
-    <span>FAHARI YA JAMII</span>
-    <span>•</span>
-    <span>FAHARI YA JAMII</span>
-    <span>•</span>
-    <span>FAHARI YA JAMII</span>
-  </div>
-</div>
-
+      <div className="w-full h-8 bg-gradient-to-r from-indigo-600 to-fuchsia-400"></div>
 
       {/* Feature List Section */}
       <div className="bg-white py-32 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center animate-fadeInRight font-poppins">
@@ -60,7 +47,7 @@ const FeatureList = () => {
             key={index}
             className="flex flex-col items-center gap-4 w-full max-w-[350px] bg-white rounded-3xl shadow-lg p-6 transition duration-500 hover:scale-105"
           >
-            <div className="rounded-3xl w-full aspect-square flex items-center justify-center bg-black">
+            <div className="rounded-3xl w-full aspect-square flex items-center justify-center bg-purple-600">
               <Image
                 src={feature.image}
                 alt="feature image"
@@ -84,10 +71,12 @@ const FeatureList = () => {
   );
 };
 
+
+
 // Footer as a div
 const Footer = () => {
   return (
-    <div className="w-full bg-gradient-to-r from-pink-300 to-fuchsia-400 text-black py-4">
+    <div className="w-full bg-gradient-to-r from-indigo-600 to-fuchsia-400 text-white py-4">
       <div className="max-w-[85rem] mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Links Section */}
@@ -109,7 +98,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="text-center mt-4 text-sm">
-          &copy; {new Date().getFullYear()} AliDada. All rights reserved.
+          &copy; {new Date().getFullYear()} TunzaMalkia. All rights reserved.
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
+
 import Image from "next/image";
-import friends from "@/../public/images/img1.png";
+import friends from "@/../public/images/friends.svg";
 
 export default function Hero() {
   return (
@@ -7,9 +8,10 @@ export default function Hero() {
       {/* hero text */}
       <div className="flex-1 flex flex-col gap-8 justify-center items-center ">
         
-        <h1 className="text-6xl font-bold text-center font-poppins animate-bounce text-pink-600">  Welcome to AliDada</h1>
+        <h1 className="text-6xl font-bold text-center font-poppins animate-bounce text-purple-600"> TunzaMalkia</h1>
         <p className="text-center text-md max-w-[60ch]">
-        Welcome to our platform, a safe and empowering space for Kenyan women with endocrine disorders(PCOS) which affects 90 million African women. Alidada aims not only to empower women living with PCOS to take control of their health but also bridge the gap of endocrine health care and general health care.
+        Welcome to our platform, a safe and empowering space for Kenyan women to access accurate, culturally sensitive information about their sexual and reproductive health. We are here to break the silence around topics that matter, from contraception to STIs, providing you with the knowledge and support to make informed decisions about your body. 
+        Explore our resources, engage with our community, and take charge of your sexual health with confidence, all in one place
         </p>
       </div>
 
