@@ -100,6 +100,8 @@ export default function Chatbot() {
     }
 
     setIsLoading(true);
+    // Add typing indicator
+    setChatHistory(prev => [...prev, { type: "bot", message: "Mama Malkia is typing..." }]);
 
     try {
       // Call Gemini API to get a response
@@ -107,31 +109,36 @@ export default function Chatbot() {
       const response = await result.response;
       const responseText = response.text();
 
-      // Check if bot's response needs a trigger warning
-      if (needsTriggerWarning(responseText)) {
-        setChatHistory(prev => [
-          ...prev,
-          {
-            type: "bot",
-            message: "⚠️ The following response discusses sensitive content. Remember, you can click 'Need help?' at any time for support.",
-            isTriggerWarning: true
-          },
-          { type: "bot", message: responseText }
-        ]);
-      } else {
-        // Add the bot's response
-        setChatHistory(prev => [...prev, { type: "bot", message: responseText }]);
-      }
+      // Remove typing indicator and add the actual response
+      setChatHistory(prev => {
+        const newHistory = prev.filter(msg => msg.message !== "Mama Malkia is typing...");
+        if (needsTriggerWarning(responseText)) {
+          return [
+            ...newHistory,
+            {
+              type: "bot",
+              message: "⚠️ The following response discusses sensitive content. Remember, you can click 'Need help?' at any time for support.",
+              isTriggerWarning: true
+            },
+            { type: "bot", message: responseText }
+          ];
+        } else {
+          return [...newHistory, { type: "bot", message: responseText }];
+        }
+      });
     } catch (error) {
       console.error("Error sending message:", error);
-      // Add error message to chat
-      setChatHistory(prev => [
-        ...prev,
-        { 
-          type: "bot", 
-          message: "Sorry, I encountered an error. Please try again." 
-        }
-      ]);
+      // Remove typing indicator and add error message
+      setChatHistory(prev => {
+        const newHistory = prev.filter(msg => msg.message !== "Mama Malkia is typing...");
+        return [
+          ...newHistory,
+          { 
+            type: "bot", 
+            message: "Sorry, I encountered an error. Please try again." 
+          }
+        ];
+      });
     } finally {
       setIsLoading(false);
     }
