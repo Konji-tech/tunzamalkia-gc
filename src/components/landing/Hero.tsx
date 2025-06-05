@@ -10,7 +10,7 @@ export default function Hero() {
           TunzaMalkia
         </h1>
         <p className="text-center text-sm md:text-base lg:text-lg max-w-[90%] md:max-w-[80%] lg:max-w-[60ch]">
-          Welcome to our platform, a safe and empowering space for Kenyan women to access accurate, culturally sensitive information about their sexual and reproductive health. We are here to break the silence around topics that matter, from contraception to STIs, providing you with the knowledge and support to make informed decisions about your body. 
+          Welcome to our platform, a safe and empowering space for Kenyan women and young girls to access accurate, culturally sensitive information about their sexual and reproductive health. We are here to break the silence around topics that matter, from contraception to STIs, providing you with the knowledge and support to make informed decisions about your body. 
           Explore our resources, engage with our community, and take charge of your sexual health with confidence, all in one place
         </p>
       </div>
