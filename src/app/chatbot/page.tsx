@@ -39,7 +39,7 @@ export default function Chatbot() {
   const systemInstruction = `You are a chatbot to focus on sexual and reproductive health of women including things such as sexuality and sex drive.
     You can talk about topics such as sexual health, reproductive health, STIs and STDs, contraceptives, sex drive, sexuality etc.
     Your focus should only be on sexual and reproductive health and things relating to it.
-    Refer to yourself as “Mama Malkia”.
+    Refer to yourself as "Mama Malkia".
     Answer the questions in detail. If the user asks any question that does not pertain to sexual health and reproduction or questions on sexuality and sex drive, say
     "oh pole! I am only here to answer your questions on sexual and reproductive health!" Have a tone of a caring mother. You can talk in Swahili moderately. You can also answer questions on sexuality and sex drive.`;
 
@@ -101,26 +101,28 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen "> 
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6"> {/* Expanded width */}
-        <h1 className="text-3xl font-bold text-center mb-6">Mama Malkia</h1>
-        <h2 className="font-bold text-center mb-6">Ask any Question on sexual and reproductive health! Usiogope!</h2>
+    <div className="flex justify-center items-center min-h-screen p-4 md:p-6"> 
+      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-4 md:p-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6">Mama Malkia</h1>
+        <h2 className="text-sm md:text-base font-bold text-center mb-4 md:mb-6">
+          Ask any Question on sexual and reproductive health! Usiogope!
+        </h2>
 
-        <div className="chat-container overflow-y-auto h-96 mb-4 p-4 bg-gray-50 rounded-lg shadow-inner">
+        <div className="chat-container overflow-y-auto h-[60vh] md:h-96 mb-4 p-3 md:p-4 bg-gray-50 rounded-lg shadow-inner">
           <ChatHistory chatHistory={chatHistory} />
           <Loading isLoading={isLoading} />
         </div>
 
-        <div className="flex mt-4">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-0 mt-4">
           <input
             type="text"
-            className="flex-grow px-4 py-2 rounded-lg border border-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-grow px-3 md:px-4 py-2 md:py-2.5 rounded-lg border border-purple-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
             placeholder="Type your message..."
             value={userInput}
             onChange={handleUserInput}
           />
           <button
-            className="px-4 py-2 ml-2 rounded-lg bg-gradient-to-r from-indigo-600  to-fuchsia-400 text-white hover:bg-blue-600 focus:outline-none"
+            className="px-4 py-2 md:py-2.5 rounded-lg bg-gradient-to-r from-indigo-600 to-fuchsia-400 text-white hover:bg-blue-600 focus:outline-none text-sm md:text-base transition-colors"
             onClick={sendMessage}
             disabled={isLoading}
           >
@@ -128,7 +130,7 @@ export default function Chatbot() {
           </button>
         </div>
         <button
-          className="mt-4 block w-full px-4 py-2 rounded-lg bg-gray-300 text-white hover:bg-gray-700 focus:outline-none"
+          className="mt-4 w-full px-4 py-2 rounded-lg bg-gray-300 text-white hover:bg-gray-700 focus:outline-none text-sm md:text-base transition-colors"
           onClick={clearChat}
         >
           Clear Chat

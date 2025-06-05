@@ -34,9 +34,9 @@ const questions: Question[] = [
   {
     question: "What does it mean if your vaginal discharge changes color or smell?",
     options: [
-      { answer: "It’s a sign of ovulation", explanation: "Incorrect. While discharge does change during ovulation, significant changes in color or smell are usually signs of an infection.", isCorrect: false },
-      { answer: " It’s always normal and nothing to worry about", explanation: "Incorrect.Changes in the color, consistency, or smell of discharge can indicate an infection and should not be ignored.", isCorrect: false },
-      { answer: " It could be a sign of an infection", explanation: "Correct! Changes in vaginal discharge can be a sign of an infection, and it’s important to consult a healthcare provider if you notice these changes.", isCorrect: true },
+      { answer: "It's a sign of ovulation", explanation: "Incorrect. While discharge does change during ovulation, significant changes in color or smell are usually signs of an infection.", isCorrect: false },
+      { answer: " It's always normal and nothing to worry about", explanation: "Incorrect.Changes in the color, consistency, or smell of discharge can indicate an infection and should not be ignored.", isCorrect: false },
+      { answer: " It could be a sign of an infection", explanation: "Correct! Changes in vaginal discharge can be a sign of an infection, and it's important to consult a healthcare provider if you notice these changes.", isCorrect: true },
       { answer: "It means your period is about to start", explanation: "Incorrect.While discharge can increase before a period, changes in color or smell are more likely to indicate an infection.", isCorrect: false },
     ],
   },
@@ -55,16 +55,16 @@ const questions: Question[] = [
       { answer: "It cleans the vagina and removes sperm", explanation: "Incorrect. Douching does not prevent pregnancy or STIs and can actually increase the risk of infections by disrupting the natural balance of bacteria in the vagina.", isCorrect: false },
       { answer: "It can actually increase the risk of infections", explanation: "Correct! Douching can increase the risk of infections and does not protect against pregnancy or STIs.", isCorrect: true },
       { answer: "Sometimes, but not always", explanation: "Incorrect. Douching is not effective at preventing pregnancy or STIs and can increase the risk of infections.", isCorrect: false },
-      { answer: " It’s effective only when done immediately after intercourse", explanation: "Incorrect.Douching is not effective at any time in preventing pregnancy or STIs and can increase the risk of infections.", isCorrect: false },
+      { answer: " It's effective only when done immediately after intercourse", explanation: "Incorrect.Douching is not effective at any time in preventing pregnancy or STIs and can increase the risk of infections.", isCorrect: false },
     ],
   },
   {
     question: "How often should you change your tampon to prevent toxic shock syndrome (TSS)",
     options: [
       { answer: "Every 4-8 hours", explanation: "Correct! Changing your tampon every 4-8 hours reduces the risk of toxic shock syndrome, which is a rare but serious condition", isCorrect: true },
-      { answer: "Every 12 hours", explanation: "Incorrect. Leaving a tampon in for 12 hours increases the risk of toxic shock syndrome. It’s recommended to change it every 4-8 hours.", isCorrect: false },
+      { answer: "Every 12 hours", explanation: "Incorrect. Leaving a tampon in for 12 hours increases the risk of toxic shock syndrome. It's recommended to change it every 4-8 hours.", isCorrect: false },
       { answer: "Once a day", explanation: "Incorrect. Tampons should be changed more frequently, every 4-8 hours, to prevent the risk of toxic shock syndrome.", isCorrect: false },
-      { answer: "Only when it feels full", explanation: "Incorrect. Even if a tampon doesn’t feel full, it should be changed every 4-8 hours to prevent toxic shock syndrome.", isCorrect: false },
+      { answer: "Only when it feels full", explanation: "Incorrect. Even if a tampon doesn't feel full, it should be changed every 4-8 hours to prevent toxic shock syndrome.", isCorrect: false },
     ],
   },
   {
@@ -143,48 +143,49 @@ export default function Quiz() {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="max-w-[70%] mx-auto mt-8 py-50 px-50">
-      <div className="bg-white py-20 px-10 rounded-lg shadow-md">
-        <h1 className="flex items-center justify-center font-bold text-4xl mb-6">
-          <span className="mr-4">Q&A</span>
+    <div className="w-[95%] sm:w-[85%] md:w-[75%] lg:w-[70%] mx-auto mt-4 md:mt-8 py-8 md:py-12 px-4 md:px-8">
+      <div className="bg-white py-8 md:py-12 px-4 md:px-8 lg:px-10 rounded-lg shadow-md">
+        <h1 className="flex items-center justify-center font-bold text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6">
+          <span className="mr-2 md:mr-4">Q&A</span>
           <Image
             src={logo}
             alt="logo"
             width={60}
             height={60}
-            className="w-10 lg:w-[90]"
+            className="w-8 h-8 md:w-10 md:h-10 lg:w-[60px] lg:h-[60px]"
           />
         </h1>
-        <div className="flex-items-center mb-4">
-        <h2 className="text-xl font-semibold flex-1">{currentQuestion.question}
-        </h2>
-        <div>
-        </div>
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              className={`w-full py-5 px-20 mb-2 text-left rounded-lg border ${
-                selectedOption === option ? 'bg-blue-100 border-blue-500' : 'bg-gray-50 border-gray-300'
-              }`}
-              onClick={() => handleOptionClick(option)}
-            >
-              {option.answer}
-            </button>
-          ))}
-        </div>
-        {showExplanation && selectedOption && (
-          <div className={`mt-4 p-3 rounded-lg ${selectedOption.isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-            {selectedOption.explanation}
+        <div className="flex flex-col gap-4">
+          <h2 className="text-lg md:text-xl font-semibold">{currentQuestion.question}</h2>
+          <div className="space-y-3">
+            {currentQuestion.options.map((option, index) => (
+              <button
+                key={index}
+                className={`w-full py-3 md:py-4 px-4 md:px-6 text-left rounded-lg border ${
+                  selectedOption === option ? 'bg-blue-100 border-blue-500' : 'bg-gray-50 border-gray-300'
+                } hover:bg-gray-100 transition-colors`}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option.answer}
+              </button>
+            ))}
           </div>
-        )}
-        {showExplanation && (
-          <button
-            className="mt-4 py-2 px-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 text-white rounded-lg"
-            onClick={handleNextQuestion}
-          >
-            {currentQuestionIndex + 1 < questions.length ? 'Next Question' : 'Finish Quiz'}
-          </button>
-        )}
+          {showExplanation && selectedOption && (
+            <div className={`mt-4 p-3 md:p-4 rounded-lg ${
+              selectedOption.isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+            }`}>
+              {selectedOption.explanation}
+            </div>
+          )}
+          {showExplanation && (
+            <button
+              className="mt-4 w-full md:w-auto py-2 px-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 text-white rounded-lg transition-colors"
+              onClick={handleNextQuestion}
+            >
+              {currentQuestionIndex + 1 < questions.length ? 'Next Question' : 'Finish Quiz'}
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

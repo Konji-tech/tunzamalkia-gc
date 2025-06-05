@@ -100,27 +100,28 @@ function ContraceptionsList() {
 
 export default function Contraceptions() {
   return (
-    <div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between px-10 py-5  gap-16 lg:gap-32">
-        <div className="flex-1 flex flex-col gap-8 justify-center items-center">
-          <h1 className="text-6xl font-bold text-center lg:text-left">Contraceptions</h1>
+    <div className="px-4 md:px-8 lg:px-10">
+      <div className="flex flex-col-reverse lg:flex-row justify-between py-8 md:py-12 gap-8 md:gap-16 lg:gap-32">
+        <div className="flex-1 flex flex-col gap-6 md:gap-8 justify-center items-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center lg:text-left">Contraceptions</h1>
         </div>
-        <div className="flex-1 flex justify-end px-5">
+        <div className="flex-1 flex justify-center lg:justify-end px-4 md:px-5">
           <Image
             src={ccs}
             alt="contraception"
-            className="object-cover "
+            className="object-contain w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px]"
           />
         </div>
       </div>
 
-      <div className="flex flex-col px-16 py-16 bg-purple-300  text-center rounded-md  ">
-        <h2 className="text-4xl text-black font-bold">Welcome to Contraception Education </h2>
-        
+      <div className="flex flex-col px-4 md:px-8 lg:px-16 py-8 md:py-12 bg-purple-300 text-center rounded-md">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-bold">Welcome to Contraception Education</h2>
       </div>
-      <div className="flex flex-col px-16 py-16 bg-white text-center">
-        <h1 className="text-4xl text-black font-bold ">Resources</h1>
+      
+      <div className="flex flex-col px-4 md:px-8 lg:px-16 py-8 md:py-12 bg-white text-center">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl text-black font-bold">Resources</h1>
       </div>
+      
       <ContraceptionsList />
     </div>
   );
